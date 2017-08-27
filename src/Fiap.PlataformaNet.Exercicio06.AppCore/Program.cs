@@ -21,12 +21,13 @@ namespace Fiap.PlataformaNet.Exercicio06.AppCore
             {
                 Console.WriteLine($"CPF: {c.Cpf} - Nome: {c.Nome} - E-Mail: {c.Email} - Telefone: {c.Telefone} - Sexo: {c.Sexo}");
 
+                Console.WriteLine("\nPedidos:");
                 foreach (var p in c.Pedidos)
                 {
-                    Console.WriteLine("\nPedidos:");
                     Console.WriteLine($"Número: {p.PedidoId} - Data: {p.Data:d}");
-                    Console.WriteLine("".PadRight(100, '='));
                 }
+
+                Console.WriteLine("".PadRight(100, '='));
             }
 
             Console.ReadKey();

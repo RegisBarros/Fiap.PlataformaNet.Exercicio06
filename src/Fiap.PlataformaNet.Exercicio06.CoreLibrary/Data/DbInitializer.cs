@@ -41,11 +41,26 @@ namespace Fiap.PlataformaNet.Exercicio06.CoreLibrary.Data
             var pedidos = new Pedido[]
             {
                 Pedido.Criar(1, "83167303085", DateTime.Parse("07-07-2017")),
+                Pedido.Criar(7, "83167303085", DateTime.Parse("08-08-2017")),
+                Pedido.Criar(8, "83167303085", DateTime.Parse("15-08-2017")),
+                Pedido.Criar(9, "83167303085", DateTime.Parse("20-08-2017")),
+
                 Pedido.Criar(2, "53173476026", DateTime.Parse("01-03-2016")),
+                Pedido.Criar(10, "53173476026", DateTime.Parse("01-02-2017")),
+
                 Pedido.Criar(3, "19294543099", DateTime.Parse("31-05-2017")),
+
                 Pedido.Criar(4, "43937173099", DateTime.Parse("11-09-2016")),
+                Pedido.Criar(11, "43937173099", DateTime.Parse("01-02-2017")),
+                Pedido.Criar(12, "43937173099", DateTime.Parse("10-03-2017")),
+
                 Pedido.Criar(5, "19585866099", DateTime.Parse("20-08-2017")),
-                Pedido.Criar(6, "77927246038", DateTime.Parse("01-04-2017"))
+                Pedido.Criar(13, "19585866099", DateTime.Parse("27-08-2017")),
+
+                Pedido.Criar(6, "77927246038", DateTime.Parse("01-04-2017")),
+                Pedido.Criar(14, "77927246038", DateTime.Parse("05-06-2017")),
+                Pedido.Criar(15, "77927246038", DateTime.Parse("10-06-2017")),
+                Pedido.Criar(16, "77927246038", DateTime.Parse("20-07-2017"))
             };
 
             var items = new Item[]
@@ -64,6 +79,17 @@ namespace Fiap.PlataformaNet.Exercicio06.CoreLibrary.Data
                 Item.Criar(5, 2, 1, 1999M),
                 Item.Criar(6, 8, 1, 1200.90M),
                 Item.Criar(6, 6, 1, 175.91M),
+
+                Item.Criar(7, 6, 1, 175.91M),
+                Item.Criar(8, 4, 10, 629.1M),
+                Item.Criar(9, 3, 1, 2349.90M),
+                Item.Criar(10, 7, 5, 7500M),
+                Item.Criar(11, 8, 1, 1200.90M),
+                Item.Criar(12, 1, 2, 7000M),
+                Item.Criar(13, 9, 3, 749.7M),
+                Item.Criar(14, 9, 3, 749.7M),
+                Item.Criar(15, 1, 1, 3500M),
+                Item.Criar(16, 8, 1, 1200.90M)
             };
 
             context.Clientes.AddRange(clientes);
