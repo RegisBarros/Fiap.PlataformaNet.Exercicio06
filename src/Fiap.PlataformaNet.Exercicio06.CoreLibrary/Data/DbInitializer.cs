@@ -79,7 +79,6 @@ namespace Fiap.PlataformaNet.Exercicio06.CoreLibrary.Data
                 Item.Criar(5, 2, 1, 1999M),
                 Item.Criar(6, 8, 1, 1200.90M),
                 Item.Criar(6, 6, 1, 175.91M),
-
                 Item.Criar(7, 6, 1, 175.91M),
                 Item.Criar(8, 4, 10, 629.1M),
                 Item.Criar(9, 3, 1, 2349.90M),

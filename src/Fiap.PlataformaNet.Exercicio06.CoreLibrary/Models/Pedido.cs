@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Fiap.PlataformaNet.Exercicio06.CoreLibrary.Models
@@ -13,6 +14,8 @@ namespace Fiap.PlataformaNet.Exercicio06.CoreLibrary.Models
         public DateTime Data { get; set; }
 
         public Cliente Cliente { get; set; }
+
+        public ICollection<Item> Items { get; set; }
 
         public static Pedido Criar(int id, string cpf, DateTime data)
         {

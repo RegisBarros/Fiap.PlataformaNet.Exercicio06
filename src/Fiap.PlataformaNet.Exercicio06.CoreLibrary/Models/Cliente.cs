@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Fiap.PlataformaNet.Exercicio06.CoreLibrary.Models
 {
@@ -15,8 +14,6 @@ namespace Fiap.PlataformaNet.Exercicio06.CoreLibrary.Models
         public string Email { get; set; }
 
         public string Sexo { get; set; }
-
-        public ICollection<Pedido> Pedidos { get; set; }
 
         public static Cliente Criar(string cpf, string nome, string telefone, string email, string sexo)
         {

@@ -12,25 +12,31 @@ namespace Fiap.PlataformaNet.Exercicio06.AppCore
             var context = new VendasContext();
             DbInitializer.Initialize(context);
 
-            var clientes = context.Clientes
-                .Include(p => p.Pedidos)
+            var pedidos = context.Pedidos
+                .Include(p => p.Cliente)
+                .Include(p => p.Items)
+                .Include("Items.Produto")
                 .ToList();
 
-            Console.WriteLine("Pedidos por Clientes:\n");
-            foreach (var c in clientes)
+            Console.WriteLine("Lista de Pedidos:\n");
+            Console.WriteLine("".PadRight(100, '='));
+            foreach (var p in pedidos)
             {
-                Console.WriteLine($"CPF: {c.Cpf} - Nome: {c.Nome} - E-Mail: {c.Email} - Telefone: {c.Telefone} - Sexo: {c.Sexo}");
+                Console.WriteLine($"Pedido: {p.PedidoId} - Data: {p.Data:d} - Cliente: {p.Cliente.Nome} - E-Mail: {p.Cliente.Email}\n");
 
-                Console.WriteLine("\nPedidos:");
-                foreach (var p in c.Pedidos)
+                Console.WriteLine("Itens:");
+
+                foreach (var item in p.Items)
                 {
-                    Console.WriteLine($"Número: {p.PedidoId} - Data: {p.Data:d}");
+                    Console.WriteLine($"{item.Produto.Descricao} - Quantidade: {item.Quantidade} - Valor: {item.Valor:c}");
                 }
+
 
                 Console.WriteLine("".PadRight(100, '='));
             }
 
             Console.ReadKey();
         }
+
     }
 }

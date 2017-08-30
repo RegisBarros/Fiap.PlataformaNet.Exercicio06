@@ -12,6 +12,8 @@
 
         public decimal Valor { get; set; }
 
+        public Produto Produto { get; set; }
+
         public static Item Criar(int pedidoId, int produtoId, int quantidade, decimal valor)
         {
             return new Item()
