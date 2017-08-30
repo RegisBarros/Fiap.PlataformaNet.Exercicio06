@@ -19,7 +19,7 @@ namespace Fiap.PlataformaNet.Exercicio06.AppCore
                 .ToList();
 
             Console.WriteLine("Lista de Pedidos:\n");
-            Console.WriteLine("".PadRight(100, '='));
+            Console.WriteLine(string.Empty.PadRight(100, '='));
             foreach (var p in pedidos)
             {
                 Console.WriteLine($"Pedido: {p.PedidoId} - Data: {p.Data:d} - Cliente: {p.Cliente.Nome} - E-Mail: {p.Cliente.Email}\n");
@@ -28,15 +28,14 @@ namespace Fiap.PlataformaNet.Exercicio06.AppCore
 
                 foreach (var item in p.Items)
                 {
-                    Console.WriteLine($"{item.Produto.Descricao} - Quantidade: {item.Quantidade} - Valor: {item.Valor:c}");
+                    Console.WriteLine($"=> {item.Produto.Descricao} - Quantidade: {item.Quantidade} - Valor: {item.Valor:c}");
                 }
 
 
-                Console.WriteLine("".PadRight(100, '='));
+                Console.WriteLine(string.Empty.PadRight(100, '='));
             }
 
             Console.ReadKey();
         }
-
     }
 }
